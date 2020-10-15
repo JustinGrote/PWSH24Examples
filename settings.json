@@ -1,0 +1,402 @@
+{
+    //==============
+    //VSCode General
+    //==============
+    //My most recommended change, your code doesn't move now
+    "workbench.sideBar.location": "right",
+    //I don't find this useful, wasted screen space
+    "editor.minimap.enabled": false,
+    //I live dangerously
+    "debug.onTaskErrors": "debugAnyway",
+    //When diffing raw HTTP requests, whitespace sometimes matters
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    //Not a fan
+    "editor.columnSelection": false,
+    //Thanks but no thanks
+    "extensions.ignoreRecommendations": true,
+    //CaskaydiaCove NF is Cascadia Code with fancy Nerd Font symbols and ligatures
+    "editor.fontFamily": "CaskaydiaCove NF, Cascadia Code, Consolas NF, Inconsolata NF, Consolas, Courier New, monospace",
+    "debug.console.fontFamily": "CaskaydiaCove NF, Consolas NF, Inconsolata NF, Consolas, Courier New, monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16, 
+    //Save files after 10 seconds of no typing. Since I use Git a lot I'm not worried about accidentally overwriting stuff
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10000,
+    //Always remember unsaved files, I'll explicitly close them if I don't want them
+    "files.hotExit": "onExitAndWindowClose",
+    //Remove requirement to hold shift to scroll between tabs
+    "workbench.editor.scrollToSwitchTabs": true,
+    //Nice and clean
+    "workbench.startupEditor": "newUntitledFile",
+    //Powershell is the default with "new Item"
+    "files.defaultLanguage": "powershell",
+    //Company standard file width
+    "editor.rulers": [
+        120
+    ],
+    //I want Powershell Intellisense first
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    //Powershell does this so bringing it over
+    "editor.tabCompletion": "on",
+
+    //I use insiders and don't want to break stuff mid-work
+    "update.enableWindowsBackgroundUpdates": false,
+
+    //Follow the OS theme default
+    "window.autoDetectColorScheme": true,
+
+
+    "window.newWindowDimensions": "maximized",
+    //Hammers my system if I left a bunch of stuff open before. I'll open what i want
+    "window.restoreWindows": "none",
+    
+    //Easier for me to distinguish between multiple windows
+    "window.title": "${dirty}${remoteName}${separator}${rootName}${separator}${activeEditorShort}${separator}${appName}",
+    "window.titleSeparator": " | ",
+
+    //==============
+    //Terminal Stuff
+    //==============
+    "terminal.explorerKind": "external",
+    "terminal.external.windowsExec": "wt",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.experimentalUseTitleEvent": true,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.scrollback": 9999,
+    "terminal.integrated.shell.windows": "C:\\Users\\jgrote\\scoop\\apps\\pwsh\\current\\pwsh.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "-nologo"
+    ],
+
+    //==============
+    //Bracket Pair Colorizer
+    //==============
+    //Helpful highlighting in the ruler
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "bracket-pair-colorizer-2.rulerPosition": "Full",
+    "bracket-pair-colorizer-2.showBracketsInRuler": true,
+    //Causes a conflict with bracket pair colorizer
+    "editor.matchBrackets": "never",
+
+    //==============
+    //Git and Github
+    //==============
+    //Remove old remote branches, helpful to clean up PRs
+    "git-graph.repository.fetchAndPrune": true,
+    "git-graph.repository.commits.fetchAvatars": true,
+    //Always like to make sure I'm up to date
+    "git.autofetch": true,
+    //I know what I'm doing
+    "git.confirmEmptyCommits": false,
+    "git.confirmSync": false,
+    //Commits and adds all by default unless I specifically select and stage items
+    "git.enableSmartCommit": true,
+    //I always push to remote on every commit to make sure I have a backup
+    //Don't usually need to sync tho so this is faster
+    "git.postCommitCommand": "push",
+    //Catch change conflicts early when working with others
+    "git.rebaseWhenSync": true,
+    "github.preferedMergeMethod": "squash",
+    "githubPullRequests.defaultMergeMethod": "squash",
+    "githubPullRequests.pullRequestTitle": "custom",
+    "githubPullRequests.remotes": [
+        "origin"
+    ],
+    //I want gitlens under the source control side bar
+    "gitlens.views.compare.location": "scm",
+    "gitlens.views.fileHistory.location": "scm",
+    "gitlens.views.lineHistory.location": "scm",
+    "gitlens.views.repositories.location": "scm",
+    "gitlens.views.search.location": "scm",
+    //Get real time Github Actions status
+    "github-actions.workflows.pinned.refresh.enabled": true,
+    "github-actions.workflows.pinned.refresh.interval": 5,
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/debug.yml"
+    ],
+
+
+    //==============
+    //Powershell Stuff
+    //==============
+    "powershell.powerShellAdditionalExePaths": [
+        {
+            "exePath": "C:\\Users\\jgrote\\scoop\\apps\\pwsh-preview\\current\\pwsh.exe",
+            "versionName": "PowerShell"
+        }
+    ],
+    //Formatting Preferences
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.newLineAfterOpenBrace": true,
+    "powershell.codeFormatting.openBraceOnSameLine": true,
+    "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+    "powershell.codeFormatting.useConstantStrings": true,
+    "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.codeFormatting.whitespaceAfterSeparator": false,
+    "powershell.codeFormatting.whitespaceBetweenParameters": true,
+    "powershell.codeFormatting.preset": "OTBS",
+    "powershell.integratedConsole.suppressStartupBanner": true,
+    "powershell.pester.useLegacyCodeLens": false,
+    "powershell.powerShellDefaultVersion": "Windows PowerShell (x64)",
+    "powershell.promptToUpdatePowerShell": false,
+    "powershell.sideBar.CommandExplorerVisibility": false,
+    "powershell.startAsLoginShell.linux": true,
+    //If you are used to ISE this is nice, I don't use them though
+    "powershell.buttons.showRunButtons": false,
+
+    //Global Launch Configurations
+    "launch": {
+        "compounds": [],
+        "configurations": [
+            {
+                "name": "PS: Interactive",
+                "presentation": {
+                    "group": "Powershell"
+                },
+                "request": "launch",
+                "type": "PowerShell"
+            },
+            {
+                "cwd": "${file}",
+                "name": "PS: Run",
+                "presentation": {
+                    "group": "Powershell"
+                },
+                "request": "launch",
+                "script": "${file}",
+                "type": "PowerShell"
+            },
+            {
+                "args": [
+                    "${command:SpecifyScriptArgs}"
+                ],
+                "cwd": "${file}",
+                "name": "PS: Run w/ Args",
+                "presentation": {
+                    "group": "Powershell"
+                },
+                "request": "launch",
+                "script": "${file}",
+                "type": "PowerShell"
+            },
+            {
+                "args": [
+                    "${command:SpecifyScriptArgs}"
+                ],
+                "name": "PS: Pester",
+                "presentation": {
+                    "group": "Powershell"
+                },
+                "request": "launch",
+                "script": "Invoke-Pester",
+                "type": "PowerShell"
+            },
+            {
+                "name": "PS: Attach",
+                "presentation": {
+                    "group": "Powershell"
+                },
+                "processId": "${command:PickPSHostProcess}",
+                "request": "attach",
+                "runspaceId": 1,
+                "type": "PowerShell"
+            }
+        ]
+    },
+
+
+    //==============
+    //Defalt Dark+ Theming Stuff
+    //==============
+    //Match to Default Dark+ Theme
+    "bracket-pair-colorizer-2.colors": [
+        "#daadd6",
+        "#9cdcfe",
+        "#DCDCAA",
+        "#b5cea8",
+        "#C586C0",
+        "#569cd6",
+        "#D7BA7D",
+        "#6a9955"
+    ],
+    "indentRainbow.colors": [
+        "#daadd620",
+        "#9cdcfe20",
+        "#DCDCAA20",
+        "#b5cea820",
+        "#C586C020",
+        "#569cd620",
+        "#D7BA7D20",
+        "#6a995520"
+    ],
+    "workbench.colorCustomizations": {
+        "errorLens.errorBackground": "#e4545410",
+        "errorLens.errorForeground": "#ff646440",
+        "errorLens.errorMessageBackground": "#e4545405",
+        "errorLens.warningBackground": "#ff942f10",
+        "errorLens.warningForeground": "#fa973a70",
+        "errorLens.warningMessageBackground": "#fff00005",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiBlue": "#2472c8",
+        "terminal.ansiBrightBlack": "#666666",
+        "terminal.ansiBrightBlue": "#569cd6",
+        "terminal.ansiBrightCyan": "#9cdcfe",
+        "terminal.ansiBrightGreen": "#b5cea8",
+        "terminal.ansiBrightMagenta": "#daadd6",
+        "terminal.ansiBrightRed": "#f14c4c",
+        "terminal.ansiBrightWhite": "#e5e5e5",
+        "terminal.ansiBrightYellow": "#DCDCAA",
+        "terminal.ansiCyan": "#11a8cd",
+        "terminal.ansiGreen": "#6a9955",
+        "terminal.ansiMagenta": "#C586C0",
+        "terminal.ansiRed": "#cd3131",
+        "terminal.ansiWhite": "#e5e5e5",
+        "terminal.ansiYellow": "#CE9178",
+        "terminal.background": "#1E1E1E",
+        "terminal.foreground": "#D4D4D4"
+    },
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#b52e31"
+        },
+        {
+            "name": "Auth0 Orange",
+            "value": "#eb5424"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "C# Purple",
+            "value": "#68217A"
+        },
+        {
+            "name": "Gatsby Purple",
+            "value": "#639"
+        },
+        {
+            "name": "Go Cyan",
+            "value": "#5dc9e2"
+        },
+        {
+            "name": "Java Blue-Gray",
+            "value": "#557c9b"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#00b3e6"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    //Icon Stuff
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.preferredLightColorTheme": "PowerShell ISE",
+    "vsicons.associations.files": [
+        {
+            "extensions": [
+                "arm.json"
+            ],
+            "format": "svg",
+            "icon": "azure"
+        },
+        {
+            "extensions": [
+                "parameters.json"
+            ],
+            "format": "svg",
+            "icon": "config"
+        },
+        {
+            "extensions": [
+                "tests.ps1"
+            ],
+            "format": "svg",
+            "icon": "test"
+        },
+        {
+            "extensions": [
+                "clixml"
+            ],
+            "format": "svg",
+            "icon": "xml"
+        }
+    ],
+    "vsicons.associations.folders": [
+        {
+            "extends": "dist",
+            "extensions": [
+                "BuildOutput",
+                "Output"
+            ],
+            "format": "svg",
+            "icon": "dist"
+        },
+        {
+            "extends": "helper",
+            "extensions": [
+                "BuildHelpers"
+            ],
+            "format": "svg",
+            "icon": "helper"
+        }
+    ],
+    "vsicons.dontShowNewVersionMessage": true,
+    //Pretty!
+    "editor.cursorBlinking": "phase",
+
+
+
+    //Misc Remoting Stuff
+    "remote.SSH.allowLocalServerDownload": false,
+    "remote.SSH.connectTimeout": 30,
+    "remote.SSH.defaultExtensions": [
+        "ms-vscode.powershell-preview",
+        "oderwat.indent-rainbow"
+    ],
+    "remote.SSH.enableDynamicForwarding": true,
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.suppressWindowsSshWarning": true,
+    "remote.SSH.useLocalServer": true,
+    "remote.extensionKind": {
+        "ms-azuretools.vscode-docker": "workspace"
+    },
+    "settingsSync.ignoredSettings": [
+        "powershell.powerShellDefaultVersion",
+        "git.defaultCloneDirectory"
+    ],
+    "markdown.extension.orderedList.marker": "one",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "DEBUG"
+    ],
+    "todo-tree.tree.showScanModeButton": false
+}

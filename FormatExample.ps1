@@ -1,0 +1,1 @@
+@{test='test'}|? test|%{write $_}
